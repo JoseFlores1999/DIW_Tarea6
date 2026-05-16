@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Información de Librería Jose, ubicación, equipo y ayuda sobre la web.">
+  <meta name="author" content="José Luis Flores Gálvez">
+  <title>Librería Jose — Información</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <header class="cabecera-sitio">
+    <div class="container cabecera-interior">
+      <a class="brand" href="index.html" aria-label="Ir a inicio">
+        <svg class="brand-logo-svg" viewBox="0 0 220 120" role="img" aria-label="Librería Jose">
+          <g class="logo-trazo">
+            <path d="M44 84V34c0-4 3-7 7-7h54c7 0 13 6 13 13v44c0 7-6 13-13 13H58c-7 0-14-6-14-13z"></path>
+            <g class="logo-lineas">
+              <path d="M64 42h34"></path>
+              <path d="M64 58h34"></path>
+              <path d="M64 74h22"></path>
+            </g>
+            <path class="logo-pagina" d="M118 42c10-8 20-10 30-10h18c8 0 14 6 14 14v42c0 8-6 14-14 14h-18c-12 0-22-3-30-11"></path>
+          </g>
+        </svg>
+      </a>
+
+      <nav class="main-nav" aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="busqueda.html">Búsqueda</a>
+        <a href="producto.html">Producto</a>
+        <a href="carrito.html">Carrito</a>
+      </nav>
+      <form class="buscador-cabecera" role="search" action="busqueda.html">
+        <label class="visually-hidden" for="q">Buscar</label>
+        <input id="q" name="q" type="search" placeholder="Buscar..." />
+        <button type="submit" aria-label="Buscar">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+
+      <button class="lang-switch" type="button" aria-label="Cambiar idioma">ES/EN</button>
+
+      <a class="account-link" href="#" aria-label="Cuenta de usuario">
+        <img class="icon" src="assets/img/icons/user.svg" alt="" aria-hidden="true" width="24" height="24">
+      </a>
+
+      <a class="cart-link" href="carrito.html" aria-label="Ir al carrito">
+        <img class="icon" src="assets/img/icons/cart.svg" alt="" aria-hidden="true" width="24" height="24">
+      </a>
+      <button class="boton-tema" type="button" aria-label="Cambiar tema" data-boton-tema>
+        <i class="bi bi-moon-stars"></i>
+      </button>
+    </div>
+
+    <div class="container cabecera-titulo">
+      <span class="titulo-sitio">Librería Jose</span>
+    </div>
+  </header>
+
+  <main class="page" id="contenido">
+    <div class="container">
+      <h1 class="page-title">Sobre Librería Jose</h1>
+
+      <section class="rejilla-info" aria-label="Información de la empresa">
+        <div class="tarjeta-info">
+          <h2 class="h4">Quiénes somos</h2>
+          <p>
+            Librería Jose es una librería de barrio centrada en recomendación personalizada, novedades editoriales
+            y una selección de clásicos. La idea de la web es facilitar búsqueda, consulta de fichas y compra rápida.
+            Apostamos por una experiencia clara y directa: información esencial, precios visibles y acceso rápido a cada título.
+            Además, cuidamos la navegación para que encuentres lo que buscas sin perder tiempo, tanto en móvil como en ordenador.
+          </p>
+        </div>
+
+        <div class="tarjeta-info">
+          <h2 class="h4">Equipo</h2>
+          <figure class="half-filter" aria-label="Foto de equipo con filtro a la derecha">
+            <img class="half-filter-img"
+                 src="assets/img/imagen_equipo.jpg"
+                 alt="Foto de equipo">
+            <div class="half-filter-right" aria-hidden="true"></div>
+            <figcaption class="credit-badge">
+              <a href="https://openverse.org/es/image/2e31c6b4-6fe7-4a9d-a254-615b58118302?q=trabajo&p=32"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Ver atribución de la imagen en Openverse">
+                Fuente
+              </a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="tarjeta-info">
+          <h2 class="h4">Dónde estamos</h2>
+          <div class="embed-responsive">
+            <iframe
+              title="Mapa (Google Maps)"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=IES%20Al-Andalus%20Almeria&output=embed">
+            </iframe>
+          </div>
+        </div>
+
+        <div class="tarjeta-info">
+          <h2 class="h4">Vídeo</h2>
+          <div class="embed-responsive">
+            <iframe
+              title="Vídeo de YouTube"
+              loading="lazy"
+              src="https://www.youtube-nocookie.com/embed/9mu-nxc3De8?playlist=9mu-nxc3De8&autoplay=1&iv_load_policy=3&loop=1&start=&cc_load_policy=1&cc_lang_pref=es"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+
+
+        <div class="tarjeta-info">
+          <h2 class="h4">Preguntas frecuentes</h2>
+          <div class="accordion accordion-flush" id="acordeonInfo">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqUno">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanelUno" aria-expanded="false" aria-controls="faqPanelUno">
+                  ¿Puedo reservar un libro?
+                </button>
+              </h3>
+              <div id="faqPanelUno" class="accordion-collapse collapse" aria-labelledby="faqUno" data-bs-parent="#acordeonInfo">
+                <div class="accordion-body">Sí. Puedes contactar con la librería y recogerlo cuando esté preparado.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqDos">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanelDos" aria-expanded="false" aria-controls="faqPanelDos">
+                  ¿Hay envío a domicilio?
+                </button>
+              </h3>
+              <div id="faqPanelDos" class="accordion-collapse collapse" aria-labelledby="faqDos" data-bs-parent="#acordeonInfo">
+                <div class="accordion-body">Sí. El envío habitual en península es de 24/48 horas.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqTres">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqPanelTres" aria-expanded="false" aria-controls="faqPanelTres">
+                  ¿Puedo pedir recomendaciones?
+                </button>
+              </h3>
+              <div id="faqPanelTres" class="accordion-collapse collapse" aria-labelledby="faqTres" data-bs-parent="#acordeonInfo">
+                <div class="accordion-body">Sí. La tienda ofrece recomendaciones según género, edad y tipo de lectura.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-block">
+        <strong>Librería Jose</strong><br>
+        Av. Padre Méndez, 30, 04006 Almería<br>
+        +34 600 123 456<br>
+        contacto@libreriajose.es
+      </div>
+
+      <div class="footer-block">
+        <strong>Redes</strong><br>
+        <a href="#" aria-label="Instagram">Instagram</a> ·
+        <a href="#" aria-label="Facebook">Facebook</a> ·
+        <a href="#" aria-label="X">X</a>
+      </div>
+
+      <div class="footer-block">
+        <strong>Información</strong><br>
+        <a href="info.html">Sobre nosotros</a>
+      </div>
+
+      <div class="footer-block">
+        © 2025 Librería Jose
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

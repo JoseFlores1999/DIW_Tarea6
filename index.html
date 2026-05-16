@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web de Librería Jose con novedades, recomendaciones, animaciones e interacciones de compra.">
+  <meta name="author" content="José Luis Flores Gálvez">
+  <title>Librería Jose — Inicio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <header class="cabecera-sitio">
+    <div class="container cabecera-interior">
+      <a class="brand" href="index.html" aria-label="Ir a inicio">
+        <svg class="brand-logo-svg" viewBox="0 0 220 120" role="img" aria-label="Librería Jose">
+          <g class="logo-trazo">
+            <path d="M44 84V34c0-4 3-7 7-7h54c7 0 13 6 13 13v44c0 7-6 13-13 13H58c-7 0-14-6-14-13z"></path>
+            <g class="logo-lineas">
+              <path d="M64 42h34"></path>
+              <path d="M64 58h34"></path>
+              <path d="M64 74h22"></path>
+            </g>
+            <path class="logo-pagina" d="M118 42c10-8 20-10 30-10h18c8 0 14 6 14 14v42c0 8-6 14-14 14h-18c-12 0-22-3-30-11"></path>
+          </g>
+        </svg>
+      </a>
+
+      <nav class="main-nav" aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="busqueda.html">Búsqueda</a>
+        <a href="producto.html">Producto</a>
+        <a href="carrito.html">Carrito</a>
+      </nav>
+
+      <form class="buscador-cabecera" role="search" action="busqueda.html">
+        <label class="visually-hidden" for="q">Buscar</label>
+        <input id="q" name="q" type="search" placeholder="Buscar..." />
+        <button type="submit" aria-label="Buscar">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+
+      <button class="lang-switch" type="button" aria-label="Cambiar idioma">
+        ES/EN
+      </button>
+
+      <a class="account-link" href="#" aria-label="Cuenta de usuario">
+        <img class="icon" src="assets/img/icons/user.svg" alt="" aria-hidden="true" width="24" height="24">
+      </a>
+
+      <a class="cart-link" href="carrito.html" aria-label="Ir al carrito">
+        <img class="icon" src="assets/img/icons/cart.svg" alt="" aria-hidden="true" width="24" height="24">
+      </a>
+
+      <button class="boton-tema" type="button" aria-label="Cambiar tema" data-boton-tema>
+        <i class="bi bi-moon-stars"></i>
+      </button>
+    </div>
+
+    <div class="container cabecera-titulo">
+      <span class="titulo-sitio">Librería Jose</span>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="portada portada-montaje">
+      <div class="container">
+        <div class="portada-contenido">
+          <div class="portada-copy reveal">
+            <h1 class="portada-titulo">Tu próxima lectura te espera</h1>
+            <p class="portada-texto">
+              Novedades, clásicos y recomendaciones para regalar o para ti.
+            </p>
+            <a class="btn btn-primary portada-cta cta-pulse" href="#novedades">Ver novedades</a>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero-credito"
+         href="https://openverse.org/es/image/d2bdb93a-1475-4dfb-be40-1329a90e3060?q=library&p=11"
+         target="_blank" rel="noopener noreferrer">
+        Imagen creada por: Thomas Kelley
+      </a>
+    </section>
+
+    <section class="section banner-gwd">
+      <div class="container">
+        <div class="banner-gwd-wrap">
+          <iframe
+            class="banner-gwd-frame"
+            src="banner/banner-destacado/banner-destacado.html"
+            title="Banner destacado">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <div class="separador-animado" aria-hidden="true"></div>
+
+    <section class="stripe reveal">
+      <div class="container">
+        <div class="alert stripe-box mb-0" role="note">
+          Envío 24/48h en península
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="novedades">
+      <div class="container">
+        <h2 class="section-title reveal">Novedades</h2>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <article class="card h-100 book-card">
+              <a class="enlace-portada"
+                 href="producto.html?id=nombre_viento"
+                 data-zoom
+                 data-img-grande="assets/img/products/lg/nombre_viento.jpg">
+                <img class="imagen-portada"
+                     src="assets/img/products/sm/nombre_viento.jpg"
+                     srcset="assets/img/products/sm/nombre_viento.jpg 360w, assets/img/products/md/nombre_viento.jpg 600w"
+                     sizes="(min-width: 992px) 320px, (min-width: 768px) 260px, 100vw"
+                     loading="lazy"
+                     alt="Portada de El nombre del viento">
+              </a>
+              <div class="card-body">
+                <h3 class="card-title h5 mb-2">El nombre del viento</h3>
+                <p class="price mb-3">19,95€</p>
+                <a class="btn btn-outline-primary btn-sm" href="producto.html?id=nombre_viento">Ver ficha</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <article class="card h-100 book-card">
+              <a class="enlace-portada"
+                 href="producto.html?id=1984"
+                 data-zoom
+                 data-img-grande="assets/img/products/lg/1984.jpg">
+                <img class="imagen-portada"
+                     src="assets/img/products/sm/1984.jpg"
+                     srcset="assets/img/products/sm/1984.jpg 360w, assets/img/products/md/1984.jpg 600w"
+                     sizes="(min-width: 992px) 320px, (min-width: 768px) 260px, 100vw"
+                     loading="lazy"
+                     alt="Portada de 1984">
+              </a>
+              <div class="card-body">
+                <h3 class="card-title h5 mb-2">1984</h3>
+                <p class="price mb-3">12,50€</p>
+                <a class="btn btn-outline-primary btn-sm" href="producto.html?id=1984">Ver ficha</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <article class="card h-100 book-card">
+              <a class="enlace-portada"
+                 href="producto.html?id=dune"
+                 data-zoom
+                 data-img-grande="assets/img/products/lg/dune.jpg">
+                <img class="imagen-portada"
+                     src="assets/img/products/sm/dune.jpg"
+                     srcset="assets/img/products/sm/dune.jpg 360w, assets/img/products/md/dune.jpg 600w"
+                     sizes="(min-width: 992px) 320px, (min-width: 768px) 260px, 100vw"
+                     loading="lazy"
+                     alt="Portada de Dune">
+              </a>
+              <div class="card-body">
+                <h3 class="card-title h5 mb-2">Dune</h3>
+                <p class="price mb-3">22,00€</p>
+                <a class="btn btn-outline-primary btn-sm" href="producto.html?id=dune">Ver ficha</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section" aria-labelledby="titulo-carousel">
+      <div class="container">
+        <h2 class="section-title reveal" id="titulo-carousel">Selección recomendada</h2>
+
+        <div id="carouselLibros" class="carousel slide carousel-libros reveal" data-bs-ride="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-book-card">
+                <img src="assets/img/products/sm/nombre_viento.jpg" alt="Portada de El nombre del viento">
+                <div>
+                  <h3>El nombre del viento</h3>
+                  <p>Fantasía y aventura para empezar una saga larga.</p>
+                  <a class="btn btn-primary btn-sm" href="producto.html?id=nombre_viento">Ver ficha</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="carousel-book-card">
+                <img src="assets/img/products/sm/1984.jpg" alt="Portada de 1984">
+                <div>
+                  <h3>1984</h3>
+                  <p>Un clásico directo para lectores de distopía.</p>
+                  <a class="btn btn-primary btn-sm" href="producto.html?id=1984">Ver ficha</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="carousel-book-card">
+                <img src="assets/img/products/sm/dune.jpg" alt="Portada de Dune">
+                <div>
+                  <h3>Dune</h3>
+                  <p>Ciencia ficción para quien busca una lectura más larga.</p>
+                  <a class="btn btn-primary btn-sm" href="producto.html?id=dune">Ver ficha</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselLibros" data-bs-slide="prev" aria-label="Libro anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselLibros" data-bs-slide="next" aria-label="Libro siguiente">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="separador-animado separador-animado-secundario" aria-hidden="true"></div>
+
+    <section class="stripe reveal">
+      <div class="container">
+        <div class="alert stripe-box mb-0" role="note">
+          10% de descuento para socios
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Autores locales</h2>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <article class="card h-100 tarjeta-info">
+              <div class="card-body">
+                <h3 class="h5 mb-2">Narrativa</h3>
+                <p class="mb-0 text-muted">Recomendaciones de autores de la zona</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <article class="card h-100 tarjeta-info">
+              <div class="card-body">
+                <h3 class="h5 mb-2">Poesía</h3>
+                <p class="mb-0 text-muted">Selección mensual</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <article class="card h-100 tarjeta-info">
+              <div class="card-body">
+                <h3 class="h5 mb-2">Historia</h3>
+                <p class="mb-0 text-muted">Libros sobre Almería y Andalucía</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section chart-section">
+      <div class="container">
+        <div class="chart-card reveal">
+          <div class="chart-header">
+            <div>
+              <h2 class="section-title mb-2">Actividad de la librería</h2>
+              <p class="chart-text mb-0">Vista rápida de ventas y categorías destacadas de la tienda.</p>
+            </div>
+
+            <div class="chart-actions" role="group" aria-label="Cambiar datos del gráfico">
+              <button class="btn btn-outline-primary btn-sm chart-filter is-active" type="button" data-chart="ventas">Ventas semanales</button>
+              <button class="btn btn-outline-primary btn-sm chart-filter" type="button" data-chart="generos">Géneros destacados</button>
+            </div>
+          </div>
+
+          <div class="chart-wrap">
+            <canvas id="graficoLibreria" aria-label="Gráfico de actividad de la librería"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer reveal">
+    <div class="container footer-inner">
+      <div class="footer-block">
+        <strong>Librería Jose</strong><br>
+        Av. Padre Méndez, 30, 04006 Almería<br>
+        +34 600 123 456<br>
+        contacto@libreriajose.es
+      </div>
+
+      <div class="footer-block">
+        <strong>Redes</strong><br>
+        <a href="#" aria-label="Instagram">Instagram</a> ·
+        <a href="#" aria-label="Facebook">Facebook</a> ·
+        <a href="#" aria-label="X">X</a>
+      </div>
+
+      <div class="footer-block">
+        <strong>Información</strong><br>
+        <a href="info.html">Sobre nosotros</a>
+      </div>
+
+      <div class="footer-block">
+        © 2025 Librería Jose
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="modalImagen" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <img id="imgModalObjetivo" class="w-100" src="" alt="Imagen ampliada">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

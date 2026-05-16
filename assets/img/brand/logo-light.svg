@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="120" viewBox="0 0 220 120" role="img" aria-label="Librería Jose">
+  <style>
+    .trazo {
+      fill: none;
+      stroke: #111827;
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .lineas {
+      animation: entradaLogo .8s ease-out both;
+    }
+
+    .pagina-derecha {
+      transform-origin: center;
+      transition: transform .3s ease;
+    }
+
+    svg:hover .pagina-derecha {
+      transform: scale(1.08) translateX(3px);
+    }
+
+    @keyframes entradaLogo {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .lineas { animation: none; }
+      .pagina-derecha { transition: none; }
+    }
+  </style>
+
+  <g class="trazo">
+    <path d="M44 84V34c0-4 3-7 7-7h54c7 0 13 6 13 13v44c0 7-6 13-13 13H58c-7 0-14-6-14-13z"/>
+    <g class="lineas">
+      <path d="M64 42h34"/>
+      <path d="M64 58h34"/>
+      <path d="M64 74h22"/>
+    </g>
+    <path class="pagina-derecha" d="M118 42c10-8 20-10 30-10h18c8 0 14 6 14 14v42c0 8-6 14-14 14h-18c-12 0-22-3-30-11"/>
+  </g>
+</svg>

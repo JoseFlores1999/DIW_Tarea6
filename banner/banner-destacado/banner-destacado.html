@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Google Web Designer 16.4.1.0219">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner destacado</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 90px;
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      background: transparent;
+    }
+
+    .banner {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 90px;
+      overflow: hidden;
+      color: #ffffff;
+      text-decoration: none;
+      background: linear-gradient(120deg, #1a237e, #283593, #0f172a);
+    }
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -180px;
+      width: 150px;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+      animation: brillo 3.2s ease-in-out infinite;
+    }
+
+    .libro {
+      position: absolute;
+      left: 28px;
+      top: 16px;
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background: #f59e0b;
+      box-shadow: 0 8px 18px rgba(0,0,0,.28);
+      animation: entradaLibro .9s ease-out both, flotarLibro 2.6s ease-in-out 1s infinite;
+    }
+
+    .libro::before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: 10px;
+      width: 28px;
+      height: 38px;
+      border-radius: 4px;
+      background: #ffffff;
+      box-shadow: inset 4px 0 0 #e5e7eb;
+    }
+
+    .libro::after {
+      content: "";
+      position: absolute;
+      left: 22px;
+      top: 18px;
+      width: 16px;
+      height: 3px;
+      background: #1a237e;
+      box-shadow: 0 8px 0 #1a237e, 0 16px 0 #1a237e;
+    }
+
+    .texto {
+      position: absolute;
+      left: 112px;
+      right: 255px;
+      top: 17px;
+      animation: entradaTexto .8s ease-out both;
+    }
+
+    .titulo {
+      display: block;
+      font-size: clamp(19px, 3.2vw, 24px);
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .subtitulo {
+      display: block;
+      margin-top: 6px;
+      font-size: 14px;
+      color: rgba(255,255,255,.86);
+    }
+
+    .etiqueta {
+      position: absolute;
+      right: 128px;
+      top: 50%;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.28);
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+      animation: entradaEtiqueta 1s ease-out both;
+    }
+
+    .boton {
+      position: absolute;
+      right: 28px;
+      top: 50%;
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: #f59e0b;
+      color: #111827;
+      font-size: 15px;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(0,0,0,.28);
+      transition: transform .25s ease, background-color .25s ease;
+      animation: entradaBoton .9s ease-out both, pulsoBoton 2s ease-in-out 1.2s infinite;
+    }
+
+    .punto {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.5);
+      animation: moverPunto 4s linear infinite;
+    }
+
+    .punto-1 { left: 610px; top: 12px; }
+    .punto-2 { left: 640px; top: 68px; animation-delay: .8s; }
+    .punto-3 { left: 330px; top: 70px; animation-delay: 1.4s; }
+
+    .banner:hover .boton,
+    .banner:focus .boton {
+      transform: translateY(-50%) scale(1.08);
+      background: #fbbf24;
+    }
+
+
+    @media (max-width: 560px) {
+      .libro {
+        left: 18px;
+      }
+
+      .texto {
+        left: 90px;
+        right: 105px;
+        top: 17px;
+      }
+
+      .titulo {
+        font-size: 18px;
+      }
+
+      .subtitulo {
+        display: none;
+      }
+
+      .etiqueta {
+        display: none;
+      }
+
+      .boton {
+        right: 16px;
+        padding: 10px 13px;
+        font-size: 14px;
+      }
+
+      .punto-1,
+      .punto-2 {
+        display: none;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .libro {
+        width: 52px;
+        height: 52px;
+        left: 14px;
+        top: 19px;
+      }
+
+      .texto {
+        left: 76px;
+        right: 94px;
+      }
+
+      .titulo {
+        font-size: 17px;
+      }
+
+      .boton {
+        right: 12px;
+        padding: 9px 11px;
+        font-size: 13px;
+      }
+    }
+
+    @keyframes entradaLibro {
+      from { opacity: 0; transform: translateX(-50px) rotate(-8deg); }
+      to { opacity: 1; transform: translateX(0) rotate(0); }
+    }
+
+    @keyframes flotarLibro {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes entradaTexto {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes entradaEtiqueta {
+      from { opacity: 0; transform: translateY(-50%) scale(.7); }
+      to { opacity: 1; transform: translateY(-50%) scale(1); }
+    }
+
+    @keyframes entradaBoton {
+      from { opacity: 0; transform: translateY(-50%) translateX(45px); }
+      to { opacity: 1; transform: translateY(-50%) translateX(0); }
+    }
+
+    @keyframes pulsoBoton {
+      0% { box-shadow: 0 0 0 0 rgba(245,158,11,.55); }
+      70% { box-shadow: 0 0 0 12px rgba(245,158,11,0); }
+      100% { box-shadow: 0 0 0 0 rgba(245,158,11,0); }
+    }
+
+    @keyframes brillo {
+      0% { left: -180px; }
+      55% { left: 760px; }
+      100% { left: 760px; }
+    }
+
+    @keyframes moverPunto {
+      0% { transform: translateY(0); opacity: .35; }
+      50% { transform: translateY(-8px); opacity: .85; }
+      100% { transform: translateY(0); opacity: .35; }
+    }
+  </style>
+</head>
+<body>
+  <a class="banner" href="../../producto.html" target="_top" aria-label="Abrir ficha del producto destacado">
+    <span class="libro" aria-hidden="true"></span>
+    <span class="texto">
+      <span class="titulo">Libros que merecen la pena</span>
+      <span class="subtitulo">Descubre nuestra recomendación destacada</span>
+    </span>
+    <span class="etiqueta">Oferta destacada</span>
+    <span class="boton">Ver ficha</span>
+    <span class="punto punto-1" aria-hidden="true"></span>
+    <span class="punto punto-2" aria-hidden="true"></span>
+    <span class="punto punto-3" aria-hidden="true"></span>
+  </a>
+</body>
+</html>
